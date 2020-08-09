@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,8 +16,8 @@ class FavoriteCity extends StatefulWidget {
 
 class _FavoriteCityState extends State<FavoriteCity> {
   String nameCity = "";
-  var _currencies = ['TK', 'Dollar', 'Pounds', 'Others'];
-  var _currentSelectedItem = 'dollar';
+  var _currencies = ['Rupees', 'Dollars', 'Pounds', 'Others'];
+  var _currentItemSelected = 'Pounds';
 
   @override
   Widget build(BuildContext context) {
@@ -45,18 +44,16 @@ class _FavoriteCityState extends State<FavoriteCity> {
               },
             ),
             DropdownButton<String>(
-              items: _currencies.map((String dropStringItem) {
+              items: _currencies.map((String dropDownStringItem) {
                 return DropdownMenuItem<String>(
-                  value: dropStringItem,
-                  child: Text(dropStringItem),
+                  value: dropDownStringItem,
+                  child: Text(dropDownStringItem),
                 );
               }).toList(),
               onChanged: (String newValueSelected) {
-                setState(() {
-                  this._currentSelectedItem = newValueSelected;
-                });
+                _onDropDownItemSelected(newValueSelected);
               },
-
+              value: _currentItemSelected,
             ),
             Padding(
               padding: EdgeInsets.all(30.0),
@@ -69,5 +66,11 @@ class _FavoriteCityState extends State<FavoriteCity> {
         ),
       ),
     );
+  }
+
+  void _onDropDownItemSelected(String newValueSelected) {
+    setState(() {
+      this._currentItemSelected = newValueSelected;
+    });
   }
 }
