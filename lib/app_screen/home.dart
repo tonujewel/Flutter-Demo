@@ -24,7 +24,8 @@ class Home extends StatelessWidget {
                         fontSize: 35.0,
                         fontFamily: 'Roboto',
                         fontStyle: FontStyle.normal,
-                        color: Colors.white),
+                        color: Colors.white
+                    ),
                   )),
                   Expanded(
                       child: Text(
@@ -50,7 +51,8 @@ class Home extends StatelessWidget {
                         fontSize: 35.0,
                         fontFamily: 'Roboto',
                         fontStyle: FontStyle.normal,
-                        color: Colors.white),
+                        color: Colors.white
+                    ),
                   )),
                   Expanded(
                       child: Text(
@@ -61,7 +63,8 @@ class Home extends StatelessWidget {
                         fontSize: 20.0,
                         fontFamily: 'Roboto',
                         fontStyle: FontStyle.normal,
-                        color: Colors.white),
+                        color: Colors.white
+                    ),
                   )),
                 ],
               ),
